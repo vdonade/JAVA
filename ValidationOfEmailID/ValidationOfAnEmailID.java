@@ -15,7 +15,7 @@ public class ValidationOfAnEmailID {
 				"rohini@gmail", "Garg@.com"
 						};
 
-		
+		System.out.println("Enter your EmailID");
 		Scanner sc = new Scanner(System.in);
 		String EmailID = sc.nextLine();
 				
