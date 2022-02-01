@@ -17,6 +17,7 @@ public class User extends Thread{
 	{
 		//at a time only one thread can access this sender object
 		synchronized (sender) {
+			
 			sender.send(name,msg);
 		}
 		
