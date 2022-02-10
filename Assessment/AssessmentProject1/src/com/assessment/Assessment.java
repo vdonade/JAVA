@@ -1,16 +1,11 @@
 package com.assessment;
 import java.util.Scanner;
 import java.io.File;
-import java.io.FileFilter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.URI;
-import java.nio.file.DirectoryNotEmptyException;
 import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class Assessment {
 
@@ -53,22 +48,17 @@ public class Assessment {
 				     	getFile(path);
 				} catch (IOException e) {
 					e.printStackTrace();
-				}
-	         	
-	         		
-	         	
+				}	        	         			         	
 	        	optionsSelection();
 		        break;
 	        }
-             
-	        
+             	        
 	        else if(options==2) {
 	        	
-	        	while(true) {
-	        		
 	        	System.out.println("\nEnter 1 to add,\n Enter 2 to delete ,\n enter 3 to search file, \n Enter 4 to navigate back to main context");
 	        	int response = sc.nextInt();
-
+	        	
+	        	while(true) {
 	        	switch(response)
 	        	{
 	        	
@@ -95,7 +85,7 @@ public class Assessment {
 					try {
 						deleteFile( path1 );
 					} catch (IOException e) {
-						// TODO Auto-generated catch block
+						
 						e.printStackTrace();
 					}
 									                   
@@ -106,25 +96,45 @@ public class Assessment {
                      System.out.println("Enter the file to be searched" );
                      String name = search.next();
                      System.out.println("Enter the directory where to search ");
+                     try {
                      String directory = search.next();
                      searchFile(name,new File(directory));
+                     } catch (Exception e) {
+                    	 e.printStackTrace();
+ 					
+                     }
                      
                      break;
-                 case 4:
-                	 optionsSelection();	        	     	
+                 default:
+                	 optionsSelection();	
+                	
 	        	}
+	        	break;
 	          }	        	
 	        }
-        
+	 
+	    
 	        else if(options==3) {
+	        	try {
 	        	closeApplication();
+	        	}
+	        	catch(Exception e) {
+	        		
+	        	}
+	        	
 	        	break;
 	        }
-	        else {
-         System.out.println("You have made an invalid choice!");
-         break;
-	        }
-	        }
+	        else if(options!=1&& options!=2&& options!=3)
+	        {
+	        	
+	        		System.out.println("Please select valid option\n");
+	        		 optionsSelection();	
+	        		break;
+	        
+	       }
+	 }
+	 
+	 
 	 
 	 //Method to close application
 	 private static void closeApplication() {
@@ -139,17 +149,16 @@ public class Assessment {
 			//create the file
 			if(file.createNewFile())
 			{
-				System.out.println("File is added successfully");
+				System.out.println("File is added successfully\n");
 			}
 			else
 			{
-				System.out.println("File already Exist");
+				System.out.println("File already Exist\n");
 			}
 			//Write data to a file
 			FileWriter writer=new FileWriter(file);
 			writer.write("Welcome to File Handling");
 			writer.close();
-			
 		}
 	 
 	 
@@ -157,26 +166,30 @@ public class Assessment {
 	 //Method to delete a file
 	 private static void deleteFile(String path1) throws IOException
 		{
-		try {
-			Files.deleteIfExists(Paths.get(path1));
-			
-		} catch (NoSuchFileException e) {
-			System.out.println(e);
-		}
-		catch (DirectoryNotEmptyException e) {
-			System.out.println("Directory is not Empty");
-		}
-		catch (IOException e) {
-			System.out.println("IOException "+e);
-		}
-		System.out.println("File Deletion successfully");
-		}
+		  try
+		 {
+			if(Files.deleteIfExists(Paths.get(path1)))
+			{
+			System.out.println("File Deletion successfully\n");
+			}
+			else
+			{
+				System.out.println("File not found\n");
+			}
+		 } 
+		  catch (Exception e) 
+		 {
+			System.out.println("File not found\n");
+		 }		
+		 }
 
 
 
 //Method to search a file	 
 	 private static void searchFile(String name,File file)
 	    {
+		 try
+		 {
 	        File[] list = file.listFiles();
 	        if(list!=null)
 	        for (File fil : list)
@@ -189,11 +202,13 @@ public class Assessment {
 	            {	                
 	                System.out.println(name+" ->Found Successfully in directory "+fil.getParentFile());
 	            }
-	            else
-	            {
-	            	System.out.println(name+" -> Not Found in directory ");
-	            }
+	           
 	        }
+		 }
+		 catch (Exception e)
+		 {
+			 System.out.println(name+" ->Not found in directory");
+		 }
 	    }
 	 
 	 
@@ -214,27 +229,17 @@ public class Assessment {
         // Sort files and folders by name
         Arrays.sort(files, (f1, f2) -> f1.compareTo(f2));
 
-        for (File file : files) {
-           if (!file.isHidden()) {
-              if (file.isDirectory()) {
-                 System.out.println("DIRECTORY \t" + file.getName());
-              } else {
-                 System.out.println("FILE\t" + file.getName());
-              }
-           }
-        }
+      
         //Prints the files in file name ascending order
         for(File file:files)
         {
           System.out.println(file.getName());
-        }
-          
+        }      
 
        }
   	    } catch (Exception e) {
   	       e.getStackTrace();
 
   	    }
-	 }
-	 
+	 }	 
 } 
