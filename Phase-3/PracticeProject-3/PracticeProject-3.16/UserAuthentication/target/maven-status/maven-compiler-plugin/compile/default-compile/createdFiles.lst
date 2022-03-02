@@ -1,0 +1,6 @@
+com\project\Authentication\services\AuthenticationService.class
+com\project\Authentication\AuthenticationApplication.class
+com\project\Authentication\controllers\AuthenticationController.class
+com\project\Authentication\exceptions\UserNotFoundException.class
+com\project\Authentication\repositories\AuthenticationRepository.class
+com\project\Authentication\entities\User.class
