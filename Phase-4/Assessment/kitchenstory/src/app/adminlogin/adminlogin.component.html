@@ -1,0 +1,63 @@
+<div class="jumbotron">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<h2 style="color:blueviolet">Admin Login Form</h2><hr>
+				<form [formGroup]="adminloginForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" [(ngModel)]="adminData.email" formControlName="email" class="form-control"
+                        [ngClass]="{'is-invalid':submitted && f['email'].errors}"/>
+
+                        <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                            <div *ngIf="f['email'].errors['required']">
+                                Email can not be Empty
+                            </div>
+                            <div *ngIf="f['email'].errors['email']">
+                                Email Id is not Valid
+                            </div>
+                        </div>
+					</div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" [(ngModel)]="adminData.password" formControlName="password" class="form-control" 
+                        [ngClass]="{'is-invalid':submitted && f['password'].errors}"/>
+                       
+                             
+                        <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                            <div *ngIf="f['password'].errors['required']">
+                                Password can not be Empty
+                            </div>
+                            <div *ngIf="f['password'].errors['minlength']">
+                                Password can not be less than 8 characters
+                            </div>
+                          
+                        </div>
+					</div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Admin Login</button>               
+                    </div> 
+                    <div class="row"> 
+                        <button class="btn btn-danger" (ngclick)="onClick()" >Forget password</button>  
+                         
+                    </div>   
+                
+				</form> 
+                
+               
+			</div>
+		</div>
+	</div>
+</div>
+
+<tr *ngFor="let password of passwords; index as i">
+    <td>{{password}}</td>
+<td class="removeLink" (click)="onRemovePassword(i)">Remove</td>
+      </tr>
+
+
+<div>
+<app-forgetpassword [boxColor]="'green'"
+  [placeholderText]="'New Password'"
+  (inputEvent)="pushPassword($event)"></app-forgetpassword>
+</div>

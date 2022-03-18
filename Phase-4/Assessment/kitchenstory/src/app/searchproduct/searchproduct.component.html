@@ -1,0 +1,24 @@
+<div>
+    <a routerLink="cart">Confirmed Product Details</a>
+</div>
+<br>
+
+
+<button (click)="show()" style="background-color: rgb(142, 219, 250);">Search Product</button>
+<div>
+    <select [(ngModel)]="prodSelected" *ngIf="flag" (ngModelChange)="productSelected($event)">
+
+        <option *ngFor="let p of product" [ngValue]="p">
+            {{p.name}}
+        </option>
+    </select>
+</div>
+<br>
+{{modifiedtext}}
+
+<br>
+<div>
+    <a (click)="show()" routerLink="order">Payment</a> 
+</div>
+
+<router-outlet></router-outlet>
