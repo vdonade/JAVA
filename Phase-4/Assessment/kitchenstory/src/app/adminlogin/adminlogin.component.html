@@ -37,9 +37,7 @@
                     <div class="form-group">
                         <button class="btn btn-primary">Admin Login</button>               
                     </div> 
-                    <div class="row"> 
-                        <button class="btn btn-danger" (ngclick)="onClick()" >Forget password</button>  
-                         
+                    <div class="row"> <button class="btn btn-danger" (click)="onClick1()">Forget password</button>     
                     </div>   
                 
 				</form> 
@@ -50,14 +48,4 @@
 	</div>
 </div>
 
-<tr *ngFor="let password of passwords; index as i">
-    <td>{{password}}</td>
-<td class="removeLink" (click)="onRemovePassword(i)">Remove</td>
-      </tr>
 
-
-<div>
-<app-forgetpassword [boxColor]="'green'"
-  [placeholderText]="'New Password'"
-  (inputEvent)="pushPassword($event)"></app-forgetpassword>
-</div>

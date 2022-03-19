@@ -13,6 +13,7 @@ import { CartComponent } from './cart/cart.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { SearchproductComponent } from './searchproduct/searchproduct.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { SuccessfulComponent } from './successful/successful.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.compone
     CartComponent,
     UserloginComponent,
     SearchproductComponent,
-    ForgetpasswordComponent
+    ForgetpasswordComponent,
+    SuccessfulComponent
 
   ],
   imports: [

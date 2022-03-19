@@ -26,10 +26,10 @@ export class AdminloginComponent implements OnInit {
     })
   }
  
-  onClick(){
-    this.passwords.splice(1,1);
-  }
-  
+ onClick1(){
+  this.router.navigateByUrl('/forgetpassword');
+
+ }
   get f()
   {
     return this.adminloginForm.controls;
@@ -46,17 +46,6 @@ export class AdminloginComponent implements OnInit {
           console.log("Password Name "+ this.adminData.password)
           this.router.navigateByUrl('/admindashboard');
         }
-  }
-
-
-
-  // for Admins
-  passwords:Admin[];
-  pushPassword(data: Admin){
-    this.passwords.push(data);
-  }
-  onRemovePassword(admin: number){
-    this.passwords.splice(1, 1)
   }
 
 }

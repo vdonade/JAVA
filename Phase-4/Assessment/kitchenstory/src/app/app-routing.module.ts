@@ -1,3 +1,4 @@
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddproductComponent } from './admindashboard/addproduct/addproduct.component';
@@ -8,6 +9,7 @@ import { OrderComponent } from './order/order.component';
 import { CartComponent } from './cart/cart.component';
 import { SearchproductComponent } from './searchproduct/searchproduct.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { SuccessfulComponent } from './successful/successful.component';
 
 const routes: Routes = [
   {"path":"addproduct",component:AddproductComponent},
@@ -16,7 +18,10 @@ const routes: Routes = [
   {"path":"cart",component:CartComponent},
   {"path":"order",component:OrderComponent},
   {"path":"userlogin",component:UserloginComponent},
-  {"path":"searchproduct",component:SearchproductComponent, 
+  {"path":"successful",component:SuccessfulComponent}, 
+  {"path":"forgetpassword",component:ForgetpasswordComponent},
+  {"path":"searchproduct",component:SearchproductComponent,
+   
     children:[
       {"path":"cart",component:CartComponent},
       {"path":"order",component:OrderComponent}
