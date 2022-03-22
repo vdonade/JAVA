@@ -1,5 +1,7 @@
 package com.automateoracle;
 
+import java.util.Date;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +14,17 @@ public class Registration {
 		WebDriver driver = new ChromeDriver();
 		 
 		driver.get("https://profile.oracle.com/myprofile/account/create-account.jspx");
+		  try
+		     {
+		       System.out.println("Start of delay: "+ new Date());
+		       // Delay for 7 seonds
+		       Thread.sleep(7000);  
+		       System.out.println("End of delay: "+ new Date());
+		     }
+		     catch(InterruptedException ex)
+		     {
+		         ex.printStackTrace();
+		     }
 		
 		
 		WebElement email=driver.findElement(By.id("sView1:r1:0:email::content"));
