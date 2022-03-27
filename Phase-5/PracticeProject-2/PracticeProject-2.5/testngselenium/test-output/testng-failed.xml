@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MySuite]" parallel="classes">
+  <test thread-count="5" name="MySuite(failed)" parallel="classes">
+    <classes>
+      <class name="com.simplilearn.testngselenium.FacebookTest">
+        <methods>
+          <include name="launchFb"/>
+          <include name="afterMethod"/>
+          <include name="login"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.simplilearn.testngselenium.FacebookTest -->
+      <class name="com.simplilearn.testngselenium.GroupTest">
+        <methods>
+          <include name="launchFireFox"/>
+          <include name="loginWithFirefox"/>
+        </methods>
+      </class> <!-- com.simplilearn.testngselenium.GroupTest -->
+    </classes>
+  </test> <!-- MySuite(failed) -->
+</suite> <!-- Failed suite [MySuite] -->

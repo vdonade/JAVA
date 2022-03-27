@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="com.simplilearn.FacebookTest" duration-ms="11774" started-at="2022-03-19T13:32:55 IST" finished-at="2022-03-19T13:33:07 IST">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="11774" started-at="2022-03-19T13:32:55 IST" finished-at="2022-03-19T13:33:07 IST">
+      <class name="com.simplilearn.FacebookTest">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.simplilearn.FacebookTest@3b084709]" name="beforeMethod" is-config="true" duration-ms="19" started-at="2022-03-19T13:32:55 IST" finished-at="2022-03-19T13:32:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="launchFB()[pri:0, instance:com.simplilearn.FacebookTest@3b084709]" name="launchFB" duration-ms="11420" started-at="2022-03-19T13:32:55 IST" finished-at="2022-03-19T13:33:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchFB -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.simplilearn.FacebookTest@3b084709]" name="afterMethod" is-config="true" duration-ms="0" started-at="2022-03-19T13:33:07 IST" finished-at="2022-03-19T13:33:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.simplilearn.FacebookTest@3b084709]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2022-03-19T13:33:07 IST" finished-at="2022-03-19T13:33:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testTile()[pri:0, instance:com.simplilearn.FacebookTest@3b084709]" name="testTile" duration-ms="257" started-at="2022-03-19T13:33:07 IST" depends-on-methods="com.simplilearn.FacebookTest.launchFB" finished-at="2022-03-19T13:33:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTile -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.simplilearn.FacebookTest@3b084709]" name="afterMethod" is-config="true" duration-ms="0" started-at="2022-03-19T13:33:07 IST" finished-at="2022-03-19T13:33:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.simplilearn.FacebookTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- com.simplilearn.FacebookTest -->
+</testng-results>
