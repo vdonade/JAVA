@@ -1,0 +1,9 @@
+To detach volume-
+
+Click on the Volumes under Elastic Block Store 
+
+Select the creted volume (name is customVolume here)
+
+under Actions select the option Detach volume
+
+Refresh and check -You can see the volume is available 

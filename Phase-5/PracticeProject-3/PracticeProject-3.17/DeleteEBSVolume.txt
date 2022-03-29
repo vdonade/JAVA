@@ -1,0 +1,9 @@
+To Delete volume-
+
+Click on the Volumes under Elastic Block Store 
+
+Select the creted volume (name is customVolume here)
+
+under Actions select the option Delete volume
+
+Refresh and check 

@@ -1,0 +1,9 @@
+To Set the storage class of an object
+
+Step-1:Selected the bucket
+Select the bucket and open the list of items
+
+Step-2:Setting the storage class of an object
+Click on Upload and select the file and click Next
+Select the class and click Next
+The class will get assigned to the uploaded object

@@ -1,0 +1,8 @@
+To Empty an S3 bucket
+
+step1: Selecting the S3 bucket you want to empty
+
+step2: Emptying the bucket
+*Verified the content present in the bucket
+*Empty the bucket 
+

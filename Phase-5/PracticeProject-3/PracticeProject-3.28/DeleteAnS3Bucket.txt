@@ -1,0 +1,5 @@
+To Delete S3 Bucket
+
+Step-1:Selected the S3 bucket you want to delete
+Choose the bucket
+Step-2:Deleted the bucket

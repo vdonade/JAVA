@@ -1,0 +1,74 @@
+Open AWS Console
+--------------------------
+click on services
+
+compute --> EC2 -->Ec2 Dashboard
+
+click on LauchInstances
+------------------------------------
+select AMI : Amazon AMI
+
+select instance type: t2.micro
+
+configureInstace details: keep as default
+just check the default values
+
+Storage: by default the size is 8GB, increase if required
+
+Tags: key value pair
+Add Tag --> Name = FirstInstance
+
+Security Group: give name and also change desc name
+like: firstInstance
+firstInstance created 2022-03-22T10:32:27.283+05:30
+
+also click on Add Rule
+in ssh --> click on dropdown and change it to myIP
+add http --> keep as it is
+add Rule --> All TCP --> port 0- 65534 -> 0.0.0.0/0, ::/0 in custom
+
+review and launch
+
+generate new Keypair --> use RAS algorithm
+download key 
+
+lauch instance
+--------------------------------------------------------------------------
+after lauch click on instance and click on connect
+
+you will be able to connect with cmd 
+
+------------------------------------------
+Creating volume
+
+Clicking Volumes option under Elastic Block Store 
+
+Click on create volume 
+
+created volume according the requirement in volume type
+
+selected the General purpose DDS 
+
+Giving the size of 8 (GiB)
+
+Availability Zone --selecting the option to add the volume according to the existing EC2 instance availability zone 
+
+selected us-east-1a
+
+add tag give Key and value 
+key->Name, Value->customeVolume
+
+Click on create volume
+
+
+--------------------------
+Connect/Attach the volume 
+
+Select the created volume and undeder Actions select the option Attach volume
+
+give the instance name of the same availability zone 
+give the Device name-/dev/sdf
+
+click on attach volume
+
+To see on cmd execute command> lsblk

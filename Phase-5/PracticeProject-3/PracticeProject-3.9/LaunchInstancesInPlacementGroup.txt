@@ -1,0 +1,54 @@
+
+*Click on placement Groups under Network and Security option.
+
+click on create placement group  
+
+give the name 
+choose and select any placement strategy from given cluster, spread and partition
+give key and value 
+and click on create group
+
+---------------------------------
+Open AWS Console
+--------------------------
+click on services
+
+compute --> EC2 -->Ec2 Dashboard
+
+click on LauchInstances
+------------------------------------
+select AMI : Amazon AMI
+
+select instance type: t2.micro
+
+add instance to placement group
+click on existing placement group and add the created group
+
+
+configureInstace details: keep as default
+just check the default values
+
+Storage: by default the size is 8GB, increase if required
+
+Tags: key value pair
+Add Tag --> Name = FirstInstance
+
+Security Group: give name and also change desc name
+like: firstInstance
+firstInstance created 2022-03-22T10:32:27.283+05:30
+
+also click on Add Rule
+in ssh --> click on dropdown and change it to myIP
+add http --> keep as it is
+add Rule --> All TCP --> port 0- 65534 -> 0.0.0.0/0, ::/0 in custom
+
+review and launch
+
+generate new Keypair --> use RAS algorithm
+download key 
+
+lauch instance
+--------------------------------------------------------------------------
+after lauch click on instance and click on connect
+
+you will be able to connect with cmd 

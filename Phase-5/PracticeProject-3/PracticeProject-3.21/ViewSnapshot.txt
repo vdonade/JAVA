@@ -1,0 +1,7 @@
+To View snapshot -
+
+Click on Snapshots under Elastic Block Store option
+
+and View the Snapshot
+
+

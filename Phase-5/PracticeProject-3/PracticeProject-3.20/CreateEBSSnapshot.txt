@@ -1,0 +1,27 @@
+Can create snapshot in 2 ways-
+
+1st-
+While creating a volume can give snapshot ID
+
+from snapshot ID snapshot created.
+
+2nd-
+
+Click on Snapshots under Elastic Block Store option
+
+Click on the Create snapshot button on right side
+
+Select Resource type to take backup from Volume or Instance
+
+If Volume is selected then Give the Volume ID 
+
+give description-BackupMyVolume
+
+Added tag -
+
+Key-> ID,  Value->any no
+
+click on create snapshot
+
+and give the name to snapshot 
+

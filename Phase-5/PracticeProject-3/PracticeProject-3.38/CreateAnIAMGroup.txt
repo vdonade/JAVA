@@ -1,0 +1,5 @@
+To Create an IAM role
+
+Step-1: Created an IAM role
+Step-2: Added AWS policy to the role
+Step-3: Provided a key and a value for the role

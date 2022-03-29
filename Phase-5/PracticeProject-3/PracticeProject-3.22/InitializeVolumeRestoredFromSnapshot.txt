@@ -1,0 +1,37 @@
+To Initialize Volume Restored from Snapshot-
+
+Click on Snapshots under Elastic Block Store option
+
+Click on the Create snapshot button on right side
+
+Select Resource type to take backup from Volume or Instance
+
+If Volume is selected then Give the Volume ID 
+
+give description-BackupMyVolume
+
+Added tag -
+
+Key-> ID,  Value->any no
+
+click on create snapshot
+
+and give the name to snapshot 
+
+------------------------
+To Initialize Volume Restored from snapshot
+Click on volume under Elastic Block Store option
+
+click on create volume
+
+Selected the existing snapshot ID 
+
+can Encrypt it
+
+KMS key- Select (default)aws/ebs
+
+add tag- Key->Name , Value->RestoredBackup
+
+click on create Volume
+
+See in Volumes.
